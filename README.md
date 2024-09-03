@@ -22,6 +22,7 @@ Go to the API Gateway console and create a new REST API. <br />
 Create the following resources and methods:
 
 POST /items <br />
+GET /items <br />
 GET /items/{id} <br />
 PUT /items/{id}<br />
 DELETE /items/{id}<br />
