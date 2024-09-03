@@ -32,18 +32,20 @@ For each method, set the integration type to "Lambda Function" and select your L
 
 After run the command `npm run dev` locally, you can use the following endpoints:
 
-Create: POST /items
-Body: JSON object with item details Key, Value pair
+Create: POST /items <br />
+Body: JSON object with item details Key, Value pair <br />
 ex) {
 "name": "jiho",
 "age": 32,
 "city": "Auckland"
 }
 
-Read: GET /items/{id}
+Read: <br />
+GET /items <br />
+GET /items/{id}
 
-Update: PUT /items
-Body: JSON object with updated item details include Id
+Update: PUT /items <br />
+Body: JSON object with updated item details include Id <br />
 ex) {
 "id": "12ndijH23f",
 "name": "Park",
@@ -51,7 +53,7 @@ ex) {
 "city": Wellington
 }
 
-Delete: DELETE /items/{id}
+Delete: DELETE /items/{id}<br />
 Replace {id} with the actual item ID.
 
 # empathix
