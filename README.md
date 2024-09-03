@@ -16,32 +16,40 @@ TypeScript Lambda Function:
 Lamda function coded uploaded on AWS.
 To check the code go to `utils/lamda.ts`
 
-API Gateway:
+## API Gateway:
 
-Go to the API Gateway console and create a new REST API.
+Go to the API Gateway console and create a new REST API. <br />
 Create the following resources and methods:
 
-POST /items
-GET /items/{id}
-PUT /items/{id}
-DELETE /items/{id}
+POST /items <br />
+GET /items/{id} <br />
+PUT /items/{id}<br />
+DELETE /items/{id}<br />
 
 For each method, set the integration type to "Lambda Function" and select your Lambda function.
 
-Deploy the API:
+## Usage
 
-Create a new stage (e.g., "prod") and deploy your API.
-
-Usage
-After deployment, you can use the following endpoints:
+After run the command `npm run dev` locally, you can use the following endpoints:
 
 Create: POST /items
-Body: JSON object with item details
+Body: JSON object with item details Key, Value pair
+ex) {
+"name": "jiho",
+"age": 32,
+"city": "Auckland"
+}
 
 Read: GET /items/{id}
 
 Update: PUT /items
 Body: JSON object with updated item details include Id
+ex) {
+"id": "12ndijH23f",
+"name": "Park",
+"age": 19,
+"city": Wellington
+}
 
 Delete: DELETE /items/{id}
 Replace {id} with the actual item ID.
