@@ -1,48 +1,20 @@
-Serverless AWS Application (TypeScript)
-This project implements a serverless application on AWS using API Gateway, Lambda, and DynamoDB to perform CRUD operations. The Lambda function is written in TypeScript.
+Serverless AWS Application (TypeScript Next.js)
+This project implements a serverless application on AWS using API Gateway, Lambda, and DynamoDB to perform CRUD operations. The Lambda function is written in Next.js with TypeScript.
+
 Setup Instructions
+`npm i`
+`npm run dev`
+
+UI simply send request to API Gateway but user also can send request with API libraries such as POSTMAN.
+
+## API ENDPOINT URI is in `constants/config.ts`
 
 DynamoDB Setup:
-
-Go to the AWS DynamoDB console.
-Create a new table named "Empathix" (or your preferred name).
-Set the primary key to "id" (string).
+Connected with Empathix table (lamda function code hard coded as table name)
 
 TypeScript Lambda Function:
-
-Install Node.js and npm if not already installed.
-Create a new directory for your project and navigate to it.
-Run npm init -y to initialize a new Node.js project.
-Install necessary dependencies:
-Copynpm install aws-sdk @types/aws-lambda
-npm install --save-dev typescript @types/node aws-sdk
-
-Create a tsconfig.json file in your project root with the following content:
-jsonCopy{
-"compilerOptions": {
-"target": "ES2018",
-"module": "commonjs",
-"strict": true,
-"esModuleInterop": true,
-"outDir": "./dist"
-}
-}
-
-Create a file named index.ts and copy the provided TypeScript Lambda function code into it.
-Compile the TypeScript code: npx tsc
-Zip the contents of the dist folder.
-
-Lambda Function Setup:
-
-Go to the AWS Lambda console.
-Create a new function, choosing Node.js as the runtime.
-Upload the zip file containing your compiled TypeScript code.
-Set the handler to "index.handler".
-
-IAM Role:
-
-Create an IAM role for your Lambda function.
-Attach the AWSLambdaBasicExecutionRole and AmazonDynamoDBFullAccess policies.
+Lamda function coded uploaded on AWS.
+To check the code go to `utils/lamda.ts`
 
 API Gateway:
 
@@ -73,4 +45,5 @@ Body: JSON object with updated item details include Id
 
 Delete: DELETE /items/{id}
 Replace {id} with the actual item ID.
+
 # empathix
